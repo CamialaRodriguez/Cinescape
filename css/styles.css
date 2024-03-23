@@ -1,0 +1,757 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*setear estilos por defecto*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primario:#664488;
+    --color-secundario:#bb00bd;
+    --color-fondo1: #221039;
+    --color-fondo2:#37274b;
+    --tipo-letra: "Montserrat", sans-serif;
+}
+#con-inicio{
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: url("../img/home-img.png") var(--color-fondo1);
+    text-align: center;
+    padding-top: 415px;
+}
+#con-inicio p{
+    color: aliceblue;
+    font-size: 18px;
+    padding: 0 60px;
+    font-family: var(--tipo-letra);
+
+}
+.btn-principal{
+    padding: 14px 40px;
+    background: var(--color-primario);
+    color:white;
+    font-size: 20px;
+    border-radius: 10px;
+    display: block;
+    max-width: 90%;
+    margin: 70px auto 10px;
+    text-decoration: none;
+
+}
+.btn-secundario{
+    padding: 14px 40px;
+    background: var(--color-fondo2);
+    color:white;
+    font-size: 20px;
+    border-radius: 10px;
+    display: block;
+    max-width: 90%;
+    margin: 20px auto 0;
+    text-decoration: none;
+}
+
+/* Estilos  REGISTRO   */
+
+#con-registro{
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: url("../img/register-img.png") var(--color-fondo1);
+    text-align: center;
+    padding-top: 200px;
+}
+
+#con-registro p{
+    color: aliceblue;
+    font-size: 18px;
+    padding: 0 60px;
+    font-family: var(--tipo-letra);
+}
+
+#con-registro form{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#con-registro form input{
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+/* ESTILOS HOME */
+
+#con-home{
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: var(--color-fondo1);
+    position: relative;
+}
+
+#con-home .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+
+#con-home .header img{
+    width: 50px;
+}
+
+#con-home .header a:nth-child(3) img{
+    border-radius: 50%;
+}
+
+#con-home .filtros{
+    width: 90%; 
+    margin: 0 auto;
+    display: flex;
+    background: var(--color-fondo2);
+    border: 2px solid var(--color-primario);
+    border-radius: 12px;
+    font-size: var(--tipo-letra);
+}
+
+#con-home .filtros button{
+    background: transparent;
+    padding:12px 10px ;
+    width: 33.3%;
+    border-radius: 8px;
+    border-color:transparent;
+    color: white;
+}
+#con-home .filtros button.active{ 
+  background: var(--color-primario);
+  font-weight: 600;
+}
+
+#copy-category{
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: var(--tipo-letra);
+}
+
+#cont-aventuras{
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+#cont-aventuras h2{
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 25px;    
+    font-family: var(--tipo-letra);
+
+}
+
+#cont-aventuras hr{
+    width: 125px;
+    border: 2px solid var(--color-primario);
+    margin: 4px 0 20px;
+}
+
+.cont-caratulas{
+    display: flex;
+    overflow-x: scroll;
+}
+
+.caratula{
+    background: #fff;
+    border: transparent;
+    border-radius: 30px 0 30px 0;
+    width: 170px;
+    padding: 2px;
+    margin: 0 10px 0 0;
+    
+
+}
+
+.caratula img{
+    width: 160px;
+    border-radius: 20px 0 20px 0;
+}
+
+/* MODALES */
+
+/* MODAL CERO */
+#modal-pelicula{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    background: #221039f2;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    display: none;
+}
+
+#modal-pelicula button{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 99;
+    background: transparent;
+    border: transparent;
+    font-size: 30px;
+    color: #fff;
+}
+
+#modal-pelicula .caratula-img{
+    width: 100%;
+}
+
+#modal-pelicula .btn-play{
+    width: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 240px;
+    z-index: 9;
+}
+
+#modal-pelicula h2{
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+    margin: 20px 0;
+    display: inline-block;
+    border-bottom: 4px solid var(--color-primario);
+
+}
+
+#modal-pelicula p{
+    font-size: 18px;
+    color: #fff;
+    margin: 14px 0;
+
+}
+#modal-pelicula.modal{
+    z-index: 9;
+    display: block;
+}
+
+/* MODAL UNO */
+#modal-pelicula1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    background: #221039f2;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    display: none;
+}
+
+#modal-pelicula1 button{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 99;
+    background: transparent;
+    border: transparent;
+    font-size: 30px;
+    color: #fff;
+}
+
+#modal-pelicula1 .caratula-img{
+    width: 100%;
+}
+
+#modal-pelicula1 .btn-play{
+    width: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 240px;
+    z-index: 9;
+}
+
+#modal-pelicula1 h2{
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+    margin: 20px 0;
+    display: inline-block;
+    border-bottom: 4px solid var(--color-primario);
+
+}
+
+#modal-pelicula1 p{
+    font-size: 18px;
+    color: #fff;
+    margin: 14px 0;
+
+}
+#modal-pelicula1.modal{
+    z-index: 9;
+    display: block;
+}
+
+
+/* MODAL DOS */
+#modal-pelicula2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    background: #221039f2;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    display: none;
+}
+
+#modal-pelicula2 button{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 99;
+    background: transparent;
+    border: transparent;
+    font-size: 30px;
+    color: #fff;
+}
+
+#modal-pelicula2 .caratula-img{
+    width: 100%;
+}
+
+#modal-pelicula2 .btn-play{
+    width: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 240px;
+    z-index: 9;
+}
+
+#modal-pelicula2 h2{
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+    margin: 20px 0;
+    display: inline-block;
+    border-bottom: 4px solid var(--color-primario);
+
+}
+
+#modal-pelicula2 p{
+    font-size: 18px;
+    color: #fff;
+    margin: 14px 0;
+
+}
+#modal-pelicula2.modal{
+    z-index: 9;
+    display: block;
+}
+
+/* MODAL TRES */
+#modal-pelicula3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    background: #221039f2;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    display: none;
+}
+
+#modal-pelicula3 button{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 99;
+    background: transparent;
+    border: transparent;
+    font-size: 30px;
+    color: #fff;
+}
+
+#modal-pelicula3 .caratula-img{
+    width: 100%;
+}
+
+#modal-pelicula3 .btn-play{
+    width: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 240px;
+    z-index: 9;
+}
+
+#modal-pelicula3 h2{
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+    margin: 20px 0;
+    display: inline-block;
+    border-bottom: 4px solid var(--color-primario);
+
+}
+
+#modal-pelicula3 p{
+    font-size: 18px;
+    color: #fff;
+    margin: 14px 0;
+
+}
+#modal-pelicula3.modal{
+    z-index: 9;
+    display: block;
+}
+
+/* MODAL CUATRO */
+#modal-pelicula4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    background: #221039f2;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    display: none;
+}
+
+#modal-pelicula4 button{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 99;
+    background: transparent;
+    border: transparent;
+    font-size: 30px;
+    color: #fff;
+}
+
+#modal-pelicula4 .caratula-img{
+    width: 100%;
+}
+
+#modal-pelicula4 .btn-play{
+    width: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 240px;
+    z-index: 9;
+}
+
+#modal-pelicula4 h2{
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+    margin: 20px 0;
+    display: inline-block;
+    border-bottom: 4px solid var(--color-primario);
+
+}
+
+#modal-pelicula4 p{
+    font-size: 18px;
+    color: #fff;
+    margin: 14px 0;
+
+}
+#modal-pelicula4.modal{
+    z-index: 9;
+    display: block;
+}
+
+/* MODAL QUINTO */
+#modal-pelicula5{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    background: #221039f2;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    display: none;
+}
+
+#modal-pelicula5 button{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 99;
+    background: transparent;
+    border: transparent;
+    font-size: 30px;
+    color: #fff;
+}
+
+#modal-pelicula5 .caratula-img{
+    width: 100%;
+}
+
+#modal-pelicula5 .btn-play{
+    width: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 240px;
+    z-index: 9;
+}
+
+#modal-pelicula5 h2{
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+    margin: 20px 0;
+    display: inline-block;
+    border-bottom: 4px solid var(--color-primario);
+
+}
+
+#modal-pelicula5 p{
+    font-size: 18px;
+    color: #fff;
+    margin: 14px 0;
+
+}
+#modal-pelicula5.modal{
+    z-index: 9;
+    display: block;
+}
+
+/* MODAL SEXTO */
+#modal-pelicula6{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    background: #221039f2;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    display: none;
+}
+
+#modal-pelicula6 button{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 99;
+    background: transparent;
+    border: transparent;
+    font-size: 30px;
+    color: #fff;
+}
+
+#modal-pelicula6 .caratula-img{
+    width: 100%;
+}
+
+#modal-pelicula6 .btn-play{
+    width: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 240px;
+    z-index: 9;
+}
+
+#modal-pelicula6 h2{
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+    margin: 20px 0;
+    display: inline-block;
+    border-bottom: 4px solid var(--color-primario);
+
+}
+
+#modal-pelicula6 p{
+    font-size: 18px;
+    color: #fff;
+    margin: 14px 0;
+
+}
+#modal-pelicula6.modal{
+    z-index: 9;
+    display: block;
+}
+
+/* MODAL SEPTIMO */
+#modal-pelicula7{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    background: #221039f2;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    display: none;
+}
+
+#modal-pelicula7 button{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 99;
+    background: transparent;
+    border: transparent;
+    font-size: 30px;
+    color: #fff;
+}
+
+#modal-pelicula7 .caratula-img{
+    width: 100%;
+}
+
+#modal-pelicula7 .btn-play{
+    width: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 240px;
+    z-index: 9;
+}
+
+#modal-pelicula7 h2{
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+    margin: 20px 0;
+    display: inline-block;
+    border-bottom: 4px solid var(--color-primario);
+
+}
+
+#modal-pelicula7 p{
+    font-size: 18px;
+    color: #fff;
+    margin: 14px 0;
+
+}
+#modal-pelicula7.modal{
+    z-index: 9;
+    display: block;
+}
+
+
+/* PANEL LATERAL */
+#panel-lateral{
+    width: 330px;
+    height: 100%;
+    position: absolute;
+    left: -1500px;
+    top: 0;
+    z-index: 100;
+    background: var(--color-fondo1);
+    transition: 1s;
+    border: 4px solid var(--color-primario);  
+}
+
+#panel-lateral.active{
+    left: 0;
+    z-index: 100;
+    transition: 1s;
+}
+
+#panel-lateral button{
+    position: absolute;
+    background: transparent;
+    border: transparent;
+    left: 300px;
+    padding-top: 25px;
+    font-size: 30px;
+    color: #fff;
+}
+
+#panel-lateral img{
+    width: 50px;
+}
+
+
+#panel-lateral a:nth-child(1) img{
+    border-radius: 40%;
+}
+
+#panel-lateral h2{
+    color: #ffffff;
+    font-size: 21px;
+    font-family: var(--tipo-letra);
+    padding: 120px 40px 0;
+    padding-bottom: 5px;
+    
+}
+
+#panel-lateral hr{
+    width: 155px;
+    border: 2px solid var(--color-primario);
+    margin-left: 38px;
+}
+
+#panel-lateral ul{
+   width: 50%;
+   margin: 135px 0 135px 30px;
+}
+
+#panel-lateral ul a{
+    display: block;
+    padding: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: var(--tipo-letra);
+    font-weight: 600;
+   
+}
+
+#panel-lateral .cerrarSesion{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 40px;
+    font-family: var(--tipo-letra);
+    
+}
+
+#panel-lateral a:hover{
+    border-bottom:  3px solid #fff;
+}
+
+

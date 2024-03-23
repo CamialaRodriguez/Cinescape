@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=charset">
+    <title>CINESCAPE | INICIO</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <section id="con-home">
+        <div id="panel-lateral">
+            <button onclick="Panel()">
+            <img src="img/menu.png" alt="Icon Menu">
+            </button>
+            <h2>Editar Mi Cuenta</h2>
+            <hr>
+            <ul>
+                <a href="home.html">-Home</a>
+                <a href="#">-Aventuras</a>
+                <a href="#">-Animadas</a>
+                <a href="#">-Drama</a>
+                <a href="#">-Comedia</a>
+                <a href="#">-Ficción</a>
+                <a href="#">-Nacionales</a>
+            </ul>
+            <a class="cerrarSesion" href="index.html">Cerrar Sesión</a>
+        </div>
+        <div class="header">
+            <a href="#" onclick="Panel()"><img src="img/menu.png" alt="Icon Menu"></a>
+            <a href="#"><img src="img/icon-logo.png" alt="Icon Menu"></a>
+            <a href="#"><img src="img/user.png" alt="Icon Menu"></a>
+        </div>
+        <div class="filtros">
+            <button class="active">Aventuras</button>
+            <button>Animadas</button>
+            <button>Drama</button>
+        </div>
+        <p id="copy-category">
+            Descubre emocionates peliculas de aventura llenas de accion, peligro y exóticos lugares en CINESCAPE 
+        </p>
+
+        <div id="cont-aventuras">
+            <h2>Estrenos:</h2>
+            <hr>
+            <div class="cont-caratulas">
+                <button class="caratula" onclick="abrirPelicula()">
+                    <img src="img/guardianes3.jpg" alt="">
+                </button>
+                <button class="caratula" onclick="abrirPelicula1()">
+                    <img src="img/mariobros.jpg" alt="">
+                </button>
+                <button class="caratula" onclick="abrirPelicula2()" >
+                    <img src="img/flash.jpg" alt="">
+                </button>
+                <button class="caratula" onclick="abrirPelicula6()" >
+                    <img src="img/Trolls_3.jpg" alt="">
+                </button>
+            </div>
+        </div>
+        <div id="cont-aventuras">
+            <h2>Proximamente:</h2>
+            <hr>
+            <div class="cont-caratulas">
+                <button class="caratula" onclick="abrirPelicula3()">
+                    <img src="img/Elemental.jpg" alt="">
+                </button>
+                <button class="caratula" onclick="abrirPelicula4()">
+                    <img src="img/megalodon.jpg" alt="">
+                </button>
+                <button class="caratula" onclick="abrirPelicula5()">
+                    <img src="img/barbie.jpeg" alt="">
+                </button>
+                <button class="caratula" onclick="abrirPelicula7()" >
+                    <img src="img/wonka_drama.jpg" alt="">
+                </button>
+            </div>
+        </div>
+        
+        
+        <div id="modal-pelicula">
+            <button onclick="abrirPelicula()" class="modal" >X</button>
+            <img src="img/guardianes3.jpg" class="caratula-img" alt="Guardianes">
+            <img src="img/boton_play1.png" class="btn-play" alt="Boton Play">
+            <h2>Guardianes de <br> la Galaxia 
+            </h2>
+            <p>Estreno: 04-Mayo-2023</p>
+            <p>Accion/Aventura</p>
+            <p>Aunque sigue afectado por la pérdida de Gamora, Peter Quill debe reunir a su equipo para defender el universo de una nueva amenaza o, en caso de fracasar, será el final de los Guardianes.</p>
+        </div>
+
+        <div id="modal-pelicula1">
+            <button onclick="abrirPelicula1()" class="modal" >X</button>
+            <img src="img/mariobros.jpg" class="caratula-img" alt="Mario Bros">
+            <img src="img/boton_play1.png" class="btn-play" alt="Boton Play">
+            <h2>Super Mario <br>
+                Bros. La Pelicula 
+            </h2>
+            <p>Estreno: 06-Abril-2023</p>
+            <p>Accion/Comedia</p>
+            <p>Dos hermanos plomeros, Mario y Luigi, caen por las alcantarillas y llegan a un mundo subterráneo mágico en el que deben enfrentarse al malvado Bowser para rescatar a la princesa Peach, quien ha sido forzada a aceptar casarse con él.</p>
+        </div>
+        <div id="modal-pelicula2">
+            <button onclick="abrirPelicula2()" class="modal">X</button>
+            <img src="img/flash.jpg" class="caratula-img" alt="Flash">
+            <img src="img/boton_play1.png" class="btn-play" alt="Boton Play">
+            <h2>Flash<br>
+                La Pelicula 
+            </h2>
+            <p>Estreno: 16-Junio-2023</p>
+            <p>Accion/Fantasía</p>
+            <p>Flash viaja a través del tiempo para evitar el asesinato de su madre, pero, sin saberlo, provoca una serie de cambios que originan la creación de un multiverso.</p>
+        </div>
+
+        <div id="modal-pelicula3">
+            <button onclick="abrirPelicula3()" class="modal">X</button>
+            <img src="img/Elemental.jpg" class="caratula-img" alt="Elementos">
+            <img src="img/boton_play1.png" class="btn-play" alt="Boton Play">
+            <h2>Elementos<br>
+                La Pelicula 
+            </h2>
+            <p>Estreno: 16-Junio-2023</p>
+            <p>Infantil/Romance</p>
+            <p>En una ciudad en la que los elementos de fuego, agua, tierra y aire viven en distritos separados, una chica de fuego y un chico de agua descubren que, aunque la sociedad les diga lo contrario, tienen muchas cosas en común.</p>
+        </div>
+
+        <div id="modal-pelicula4">
+            <button onclick="abrirPelicula4()" class="modal">X</button>
+            <img src="img/megalodon.jpg" class="caratula-img" alt="Megalodon">
+            <img src="img/boton_play1.png" class="btn-play" alt="Boton Play">
+            <h2>Megalodón 2: El Gran<br>
+                Abismo
+            </h2>
+            <p>Estreno: 04-Agosto-2023</p>
+            <p>Acción/Ciencia ficción</p>
+            <p>Jonas Taylor lidera un equipo de investigación en las profundidades del océano. Acorralados por colosales tiburones prehistóricos y despiadados bandidos, los científicos intentan sobrevivir a toda costa.</p>
+        </div>
+
+        <div id="modal-pelicula5">
+            <button onclick="abrirPelicula5()" class="modal">X</button>
+            <img src="img/barbie.jpeg" class="caratula-img" alt="barbie">
+            <img src="img/boton_play1.png" class="btn-play" alt="Boton Play">
+            <h2>Barbie<br>
+                La Pelicula 
+            </h2>
+            <p>Estreno: 20-Julio-2023</p>
+            <p>Comedia/Fantasía</p>
+            <p>Después de ser expulsada de Barbieland por no ser una muñeca de aspecto perfecto, Barbie parte hacia el mundo humano para encontrar la verdadera felicidad.</p>
+        </div>
+        <div id="modal-pelicula6">
+            <button onclick="abrirPelicula6()" class="modal">X</button>
+            <img src="img/Trolls_3.jpg" class="caratula-img" alt="Trolls">
+            <img src="img/boton_play1.png" class="btn-play" alt="Boton Play">
+            <h2>Trolls 3: se armó<br>
+                la banda 
+            </h2>
+            <p>Estreno: 17-Noviembre-2023</p>
+            <p>Infantil/Comedia</p>
+            <p>Branch y Poppy emprenden un viaje para salvar a Floyd, el hermano de Branch, al que ha secuestrado una pareja de villanos estrellas del pop.</p>
+        </div>
+        <div id="modal-pelicula7">
+            <button onclick="abrirPelicula7()" class="modal">X</button>
+            <img src="img/wonka_drama.jpg" class="caratula-img" alt="wonka">
+            <img src="img/boton_play1.png" class="btn-play" alt="Boton Play">
+            <h2>Wonka<br>
+                La Pelicula 
+            </h2>
+            <p>Estreno: 06-Diciembre-2023</p>
+            <p>Infantil/Fantasía</p>
+            <p>Armado únicamente con muchos sueños y ganas de aventura, el joven chocolatero Willy Wonka conoce a los oompa-loompas y se dispone a cambiar el mundo.Armado únicamente con muchos sueños y ganas de aventura, el joven chocolatero Willy Wonka conoce a los oompa-loompas y se dispone a cambiar el mundo.
+            </p>
+        </div>
+
+    </section>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
